@@ -1,0 +1,9 @@
+nota = float(input("Digite a nota do aluno: "))
+
+if nota >= 7:
+    print("Status: Aprovado")
+elif 5 <= nota < 7:
+    print("Status: Recuperação")
+else:
+    print("Status: Reprovado")
+
