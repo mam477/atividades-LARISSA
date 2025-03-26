@@ -1,3 +1,0 @@
-entrada = input("Digite algo: ")
-print("O tipo primitivo do valor digitado é:", type(entrada))
-
