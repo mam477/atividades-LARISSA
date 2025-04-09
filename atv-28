@@ -1,0 +1,16 @@
+estoque = {}
+
+while True:
+    opcao = input("\n1. Adicionar\n2. Buscar\n3. Atualizar\n4. Exibir Estoque\n5. Sair: ")
+    if opcao == "1":
+        produto = input("Produto: ")
+        estoque[produto] = estoque.get(produto, 0) + int(input("Quantidade: "))
+    elif opcao == "2":
+        print(f"{produto}: {estoque.get(input('Produto: '), 'Não encontrado')}")
+    elif opcao == "3":
+        produto = input("Produto: ")
+        if produto in estoque: estoque[produto] = int(input("Nova quantidade: "))
+    elif opcao == "4":
+        print("\nEstoque:", estoque)
+    elif opcao == "5":
+        break

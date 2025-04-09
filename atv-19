@@ -1,0 +1,21 @@
+def atualizar_lista_compras():
+    """
+    Função para permitir que o usuário adicione itens faltantes
+    em uma lista de compras.
+    """
+    lista_compras = []
+
+    print("Digite os itens que deseja adicionar à lista de compras. Digite 'sair' para finalizar.")
+    while True:
+        item = input("Item: ")
+        if item.lower() == 'sair':
+            break
+        lista_compras.append(item)
+        print(f"'{item}' foi adicionado à lista.")
+
+    print("\nLista final de compras:")
+    for i, item in enumerate(lista_compras, start=1):
+        print(f"{i}. {item}")
+
+# Exemplo de uso:
+atualizar_lista_compras()

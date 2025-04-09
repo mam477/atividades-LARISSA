@@ -1,0 +1,17 @@
+def contar_vogais():
+    """
+    Função que solicita uma palavra do usuário e conta a quantidade de vogais.
+    """
+    contador_vogais = 'aeiouAEIOU'
+    quantidade = 0
+
+    palavra = input("Digite uma palavra: ")
+
+    for letra in palavra:
+        if letra in contador_vogais:
+            quantidade += 1
+
+    print(f"A palavra '{palavra}' contém {quantidade} vogais.")
+
+# Exemplo de uso:
+contar_vogais()

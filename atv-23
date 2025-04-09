@@ -1,0 +1,28 @@
+def calcular_gorjeta():
+    """
+    Função que calcula a gorjeta com base no valor da conta e na porcentagem escolhida pelo usuário.
+    """
+    valor_conta = float(input("Digite o valor total da conta: R$ "))
+    print("Escolha a porcentagem de gorjeta que deseja adicionar:")
+    print("1. 10%\n2. 15%\n3. 20%")
+    
+    opcao = int(input("Opção (1/2/3): "))
+    
+    if opcao == 1:
+        porcentagem = 0.10
+    elif opcao == 2:
+        porcentagem = 0.15
+    elif opcao == 3:
+        porcentagem = 0.20
+    else:
+        print("Opção inválida.")
+        return
+
+    gorjeta = valor_conta * porcentagem
+    total = valor_conta + gorjeta
+
+    print(f"Gorjeta: R$ {gorjeta:.2f}")
+    print(f"Total com gorjeta: R$ {total:.2f}")
+
+# Exemplo de uso:
+calcular_gorjeta()

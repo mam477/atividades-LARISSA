@@ -1,0 +1,4 @@
+quantidade = int(input("Quantos números você quer inserir? "))
+numeros = [float(input(f"Digite o número {i+1}: ")) for i in range(quantidade)]
+media = sum(numeros) / quantidade
+print(f"A média é: {media:.2f}")

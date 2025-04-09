@@ -1,0 +1,20 @@
+# Cadastro de alunos presentes
+presenca = []
+
+print("Digite os nomes dos alunos presentes (digite 'sair' para finalizar):")
+while True:
+    nome = input("Nome: ")
+    if nome.lower() == "sair":
+        break
+    presenca.append(nome)
+
+while True:
+    opcao = input("\n1. Buscar aluno\n2. Exibir total e sair\nEscolha: ")
+    if opcao == "1":
+        aluno = input("Nome do aluno para buscar: ")
+        print(f"{aluno} está presente." if aluno in presenca else f"{aluno} não está presente.")
+    elif opcao == "2":
+        print(f"\nTotal de alunos presentes: {len(presenca)}")
+        break
+    else:
+        print("Opção inválida!")

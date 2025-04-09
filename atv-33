@@ -1,0 +1,10 @@
+# Solicitar ao usuário que insira 10 palavras
+palavras = [input(f"Digite a palavra {i+1}: ") for i in range(10)]
+
+# Filtrar as palavras que começam com uma vogal
+vogais = ["a", "e", "i", "o", "u"]
+palavras_vogais = [palavra for palavra in palavras if palavra[0].lower() in vogais]
+
+# Exibir as listas
+print("\nLista original:", palavras)
+print("Lista filtrada (começam com vogais):", palavras_vogais)

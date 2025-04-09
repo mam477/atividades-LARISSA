@@ -1,0 +1,21 @@
+def contar_pares_impares():
+    """
+    Função que solicita ao usuário 10 números inteiros e calcula
+    a quantidade de números pares e ímpares.
+    """
+    pares = 0
+    impares = 0
+
+    print("Insira 10 números inteiros:")
+    for _ in range(10):
+        numero = int(input("Número: "))
+        if numero % 2 == 0:
+            pares += 1
+        else:
+            impares += 1
+
+    print(f"Quantidade de números pares: {pares}")
+    print(f"Quantidade de números ímpares: {impares}")
+
+# Exemplo de uso:
+contar_pares_impares()

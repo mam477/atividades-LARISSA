@@ -1,0 +1,20 @@
+def sistema_acesso():
+    """
+    Função que simula o acesso a um sistema com três tentativas
+    para informar a senha correta.
+    """
+    senha_correta = "1234"  # Defina a senha correta aqui
+    tentativas = 3
+
+    for tentativa in range(tentativas):
+        senha = input("Digite a senha: ")
+        if senha == senha_correta:
+            print("Acesso permitido!")
+            return
+        else:
+            print(f"Senha incorreta! Tentativas restantes: {tentativas - tentativa - 1}")
+
+    print("Número de tentativas excedido. Acesso negado.")
+
+# Exemplo de uso:
+sistema_acesso()

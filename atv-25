@@ -1,0 +1,16 @@
+alunos = []
+
+while True:
+    opcao = input("\n1. Adicionar\n2. Remover\n3. Mostrar e Sair\nEscolha: ")
+    if opcao == "1":
+        alunos.append(input("Nome do aluno: "))
+    elif opcao == "2":
+        nome = input("Nome para remover: ")
+        if nome in alunos:
+            alunos.remove(nome)
+    elif opcao == "3":
+        break
+    else:
+        print("Opção inválida!")
+
+print("\nLista final de alunos:", (alunos))

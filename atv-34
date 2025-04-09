@@ -1,0 +1,13 @@
+agenda = {}
+
+while True:
+    opcao = input("\n1.Adicionar\n2.Buscar\n3.Exibir Todos Ordenados\n4.Sair: ")
+    if opcao == "1":
+        data = input("Data (DD/MM/AAAA): ")
+        agenda[data] = agenda.get(data, []) + [input("Compromisso: ")]
+    elif opcao == "2":
+        print(f"{input('Data: ')}: {agenda.get(input('Data: '), 'Nenhum compromisso encontrado.')}")
+    elif opcao == "3":
+        print("\nCompromissos ordenados:", sorted(agenda.items()))
+    elif opcao == "4":
+        break

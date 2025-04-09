@@ -1,0 +1,23 @@
+# Lista para armazenar as temperaturas
+temperaturas = []
+
+# Solicitar as temperaturas ao usuário
+print("Digite as temperaturas registradas durante a semana:")
+for i in range(7):
+    temp = float(input(f"Dia {i + 1}: "))
+    temperaturas.append(temp)
+
+# Cálculos
+maior_temp = max(temperaturas)
+menor_temp = min(temperaturas)
+media_temp = sum(temperaturas) / len(temperaturas)
+
+# Exibir resultados
+print(f"\nMaior temperatura: {maior_temp}")
+print(f"Menor temperatura: {menor_temp}")
+print(f"Média semanal: {media_temp:.2f}")
+
+print("\nDias com temperaturas acima da média:")
+for i, temp in enumerate(temperaturas):
+    if temp > media_temp:
+        print(f"Dia {i + 1}: {temp}")

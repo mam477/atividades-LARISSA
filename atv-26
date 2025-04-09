@@ -1,0 +1,26 @@
+lista_compras = []
+
+while True:
+    print("1. Adicionar item")
+    print("2. Exibir itens")
+    print("3. Remover item")
+    print("4. Finalizar")
+    
+    opcao = input("Escolha uma opção: ")
+    
+    if opcao == "1":
+        item = input("Digite o item para adicionar: ")
+        lista_compras.append(item)
+    elif opcao == "2":
+        print("\nLista de compras:", lista_compras)
+    elif opcao == "3":
+        item = input("Digite o item para remover: ")
+        if item in lista_compras:
+            lista_compras.remove(item)
+        else:
+            print("Item não encontrado.")
+    elif opcao == "4":
+        print("\nLista final de compras:", lista_compras)
+        break
+    else:
+        print("Opção inválida.")

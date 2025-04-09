@@ -1,0 +1,12 @@
+# Solicitar 10 números e armazená-los em uma lista
+numeros = [int(input(f"Digite o número {i+1}: ")) for i in range(10)]
+
+# Exibir os números em ordem crescente
+print("\nNúmeros em ordem crescente:", sorted(numeros))
+
+# Exibir os números em ordem decrescente
+print("Números em ordem decrescente:", sorted(numeros, reverse=True))
+
+# Exibir apenas os valores pares
+pares = [n for n in numeros if n % 2 == 0]
+print("Valores pares:", pares)

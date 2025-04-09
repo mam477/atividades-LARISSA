@@ -1,0 +1,27 @@
+def sistema_chamada_senhas():
+    """
+    Simula a chamada de senhas em um sistema de atendimento.
+    """
+    senhas = list(range(1, 11))  # Lista de senhas (1 a 11, por exemplo)
+    print("Bem-vindo ao sistema de atendimento!")
+    
+    while True:
+        print("\nEscolha uma opção:")
+        print("1. Chamar próximo")
+        print("2. Encerrar atendimento")
+        opcao = input("Opção (1/2): ")
+        
+        if opcao == "1":
+            if senhas:
+                senha_atual = senhas.pop(0)  # Remove a próxima senha da lista
+                print(f"Próxima senha: {senha_atual}")
+            else:
+                print("Não há mais senhas para chamar.")
+        elif opcao == "2":
+            print("Atendimento encerrado. Tenha um excelente dia!")
+            break
+        else:
+            print("Opção inválida. Tente novamente.")
+
+# Exemplo de uso:
+sistema_chamada_senhas()

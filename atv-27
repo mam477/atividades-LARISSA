@@ -1,0 +1,14 @@
+# Lista para armazenar as notas
+notas = []
+
+# Cadastrar as notas
+while True:
+    nota = input("Digite uma nota (ou 'sair' para finalizar): ")
+    if nota.lower() == "sair":
+        break
+    notas.append(float(nota))  # Convertendo para float
+
+# Calcular e exibir os resultados
+print("Maior nota:", max(notas))
+print("Menor nota:", min(notas))
+print("Média das notas:", sum(notas) / len(notas))

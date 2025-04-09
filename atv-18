@@ -1,0 +1,24 @@
+def ordenar_numeros_usuario():
+    """
+    Função que solicita ao usuário para inserir números, os armazena em uma lista
+    e exibe a lista ordenada em ordem crescente.
+    """
+    numeros = []
+
+    print("Digite os números que deseja adicionar à lista. Digite 'sair' para finalizar.")
+    while True:
+        entrada = input("Número: ")
+        if entrada.lower() == 'sair':
+            break
+        try:
+            numero = float(entrada)
+            numeros.append(numero)
+        except ValueError:
+            print("Por favor, insira um número válido.")
+
+    lista_ordenada = sorted(numeros)
+    print("Lista ordenada:", lista_ordenada)
+    return lista_ordenada
+
+# Exemplo de uso:
+ordenar_numeros_usuario()
